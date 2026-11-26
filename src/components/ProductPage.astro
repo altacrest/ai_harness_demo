@@ -1,0 +1,250 @@
+---
+// Product page layout component
+interface Props {
+  title: string;
+  subtitle: string;
+  accentColor: string;
+  icon: string;
+  videoRef?: string;
+  concepts: { title: string; description: string }[];
+  keyTakeaways: string[];
+  relatedModules: { name: string; slug: string; color: string }[];
+}
+
+const { title, subtitle, accentColor, icon, videoRef, concepts, keyTakeaways, relatedModules } = Astro.props;
+---
+
+<div class="product-page" style={`--page-accent: ${accentColor};`}>
+  <header class="page-header">
+    <a href="/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Dashboard
+    </a>
+    <div class="page-icon" set:html={icon} />
+    <h1 class="page-title">{title}</h1>
+    <p class="page-subtitle">{subtitle}</p>
+    {videoRef && (
+      <div class="video-ref">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        {videoRef}
+      </div>
+    )}
+  </header>
+
+  <section class="concepts-grid">
+    <h2 class="section-heading">Conceptos Clave</h2>
+    {concepts.map((concept, i) => (
+      <div class="concept-card">
+        <span class="concept-number">{String(i + 1).padStart(2, '0')}</span>
+        <h3>{concept.title}</h3>
+        <p>{concept.description}</p>
+      </div>
+    ))}
+  </section>
+
+  <section class="takeaways">
+    <h2 class="section-heading">Conclusiones</h2>
+    <ul class="takeaway-list">
+      {keyTakeaways.map(t => (
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+            <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>{t}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="related">
+    <h2 class="section-heading">Módulos Relacionados</h2>
+    <div class="related-grid">
+      {relatedModules.map(m => (
+        <a href={`/${m.slug}`} class="related-link" style={`--rel-color: ${m.color};`}>
+          <span class="related-dot"></span>
+          {m.name}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <slot />
+</div>
+
+<style>
+  .product-page {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--page-accent);
+  }
+
+  .page-header {
+    margin-bottom: 3rem;
+  }
+
+  .page-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--page-accent);
+    margin-bottom: 1rem;
+  }
+
+  .page-icon :global(svg) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .video-ref {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--page-accent);
+    opacity: 0.7;
+  }
+
+  .section-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* Concepts */
+  .concepts-grid {
+    margin-bottom: 3rem;
+  }
+
+  .concept-card {
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.75rem;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+
+  .concept-card:hover {
+    border-color: var(--page-accent);
+  }
+
+  .concept-number {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--page-accent);
+    opacity: 0.4;
+  }
+
+  .concept-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+  }
+
+  .concept-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Takeaways */
+  .takeaways {
+    margin-bottom: 3rem;
+  }
+
+  .takeaway-list {
+    list-style: none;
+  }
+
+  .takeaway-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .takeaway-list svg {
+    min-width: 18px;
+    color: var(--page-accent);
+    margin-top: 2px;
+  }
+
+  /* Related */
+  .related {
+    margin-bottom: 2rem;
+  }
+
+  .related-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .related-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+  }
+
+  .related-link:hover {
+    border-color: var(--rel-color);
+    color: var(--rel-color);
+  }
+
+  .related-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--rel-color);
+  }
+</style>

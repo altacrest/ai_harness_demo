@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { icons } from '../components/icons';
+
+const products = [
+  {
+    name: 'CORE',
+    slug: 'core',
+    description: 'El cerebro del harness. Memoria persistente, contexto compartido y el meta-harness RSC que conecta todo el ecosistema.',
+    icon: icons.core,
+    accentColor: '#c5dd97',
+    tags: ['RSC', 'Memoria', 'OKF', 'Contexto'],
+    status: 'active' as const,
+  },
+  {
+    name: 'OMNIO',
+    slug: 'omnio',
+    description: 'Orquestación de agentes multi-modelo. Revisores paralelos, aprobadores y el flujo completo de la fábrica de software.',
+    icon: icons.omnio,
+    accentColor: '#7db4e8',
+    tags: ['MAS', 'Orquestación', 'Pipeline', 'Multi-Modelo'],
+    status: 'active' as const,
+  },
+  {
+    name: 'XENVIO',
+    slug: 'xenvio',
+    description: 'Sistema de envíos inteligente. Ejemplo real de dominio donde se aplican harnesses, grafos de conocimiento y QA automatizado.',
+    icon: icons.xenvio,
+    accentColor: '#ddb897',
+    tags: ['Shipping', 'Dominio', 'Graphify', 'API'],
+    status: 'active' as const,
+  },
+  {
+    name: 'ION',
+    slug: 'ion',
+    description: 'Disciplina de Skills. Cómo manejar, adaptar y compartir skills sin caer en la trampa de los 120+ skills globales.',
+    icon: icons.ion,
+    accentColor: '#b497dd',
+    tags: ['Skills', 'Monorepo', 'Disciplina', 'Adaptación'],
+    status: 'active' as const,
+  },
+  {
+    name: 'EDGE',
+    slug: 'edge',
+    description: 'La interfaz de control. Hooks de seguridad, clasificación de riesgo, puertas humanas y la superficie de decisión.',
+    icon: icons.edge,
+    accentColor: '#dd97b4',
+    tags: ['Hooks', 'Seguridad', 'Risk Gate', 'Control'],
+    status: 'active' as const,
+  },
+  {
+    name: 'AI',
+    slug: 'ai',
+    description: 'Fábricas de Software completas. De chatear con agentes a pipelines de producción auditables. El estado del arte.',
+    icon: icons.ai,
+    accentColor: '#97ddd2',
+    tags: ['Factory', 'TDD', 'Auditoría', 'Producción'],
+    status: 'active' as const,
+  },
+];
+---
+
+<BaseLayout title="Dashboard">
+  <section class="hero">
+    <div class="hero-badge">PLATAFORMA DE APRENDIZAJE</div>
+    <h1 class="hero-title">
+      De Agentes de IA a
+      <span class="hero-highlight">Fábricas de Software</span>
+    </h1>
+    <p class="hero-subtitle">
+      Explora los 6 pilares del ecosistema NOVACREST. Cada módulo cubre un aspecto clave
+      del desarrollo con agentes — desde el meta-harness RSC hasta fábricas de software completas.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Videos Analizados</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value">77</span>
+        <span class="stat-label">Conceptos Clave</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Módulos de Estudio</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid">
+    {products.map(product => (
+      <ProductCard {...product} />
+    ))}
+  </section>
+
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 3rem 0 2rem;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--accent-green);
+    border: 1px solid rgba(197, 221, 151, 0.3);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .hero-highlight {
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    color: var(--accent-green);
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border-color);
+  }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0 3rem;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .stat-divider {
+      width: 40px;
+      height: 1px;
+    }
+  }
+</style>

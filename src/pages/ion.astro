@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductPage from '../components/ProductPage.astro';
+import { icons } from '../components/icons';
+---
+
+<BaseLayout title="ION">
+  <ProductPage
+    title="ION"
+    subtitle="Disciplina de Skills. El arte de manejar, adaptar y compartir skills sin caer en la trampa del exceso — calidad sobre cantidad."
+    accentColor="#b497dd"
+    icon={icons.ion}
+    videoRef="Video 2 — Así se trabaja con skills y agentes de código"
+    concepts={[
+      {
+        title: 'La Trampa de los Skills',
+        description: 'El autor instaló 120+ skills globalmente pensando que más = mejor. Realidad: los skills se contradicen entre sí, el agente se confunde y los resultados se vuelven inconsistentes. Un skill es un manual — demasiados manuales = caos.'
+      },
+      {
+        title: 'Skill como Manual',
+        description: 'Cada skill es documentación que el agente lee y sigue. Manuales conflictivos producen comportamiento conflictivo. Preferir un skill claro y alineado al proyecto sobre muchos genéricos.'
+      },
+      {
+        title: 'Adaptación Selectiva',
+        description: 'No instalar skills en crudo. Analizar cada skill, extraer la idea útil, adaptarla al contexto específico del proyecto. Crear versiones propias que encajen con la arquitectura existente.'
+      },
+      {
+        title: 'Enfoque Monorepo',
+        description: 'Raíz única con documentación, skills y conocimiento compartidos. El equipo y los agentes comparten el mismo conjunto coherente. Los skills viven junto a la documentación, evitando explosión de skills.'
+      },
+      {
+        title: 'Cuándo Compartir',
+        description: 'Compartir skills para: convenciones de equipo, utilidades reutilizables (testing, deploy, security checks), conocimiento de dominio. Siempre vía monorepo, nunca mediante configuración global del agente.'
+      },
+    ]}
+    keyTakeaways={[
+      'Calidad y ajuste de los skills > cantidad',
+      'Tratar skills como manuales adaptables, no como plugins que acumular',
+      'Monorepo + adaptación selectiva = comportamiento coherente del agente',
+      'La disciplina aquí permite fábricas fiables después',
+      'Documentar por qué existe cada skill y sus restricciones',
+    ]}
+    relatedModules={[
+      { name: 'CORE', slug: 'core', color: '#c5dd97' },
+      { name: 'EDGE', slug: 'edge', color: '#dd97b4' },
+      { name: 'XENVIO', slug: 'xenvio', color: '#ddb897' },
+    ]}
+  />
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductPage from '../components/ProductPage.astro';
+import { icons } from '../components/icons';
+---
+
+<BaseLayout title="EDGE">
+  <ProductPage
+    title="EDGE"
+    subtitle="La interfaz de control. Hooks de seguridad, clasificación de riesgo, puertas humanas y la superficie de decisión donde los humanos intervienen."
+    accentColor="#dd97b4"
+    icon={icons.edge}
+    videoRef="Video 3 — Fábricas de Software: Risk Gates y Human Decision Agents"
+    concepts={[
+      {
+        title: 'Clasificación de Riesgo',
+        description: 'Alto riesgo (esquema de BD, auth, pagos, APIs core) → requiere revisión humana del PR. Bajo riesgo (texto, color de botón, ajustes de UI) → puede auto-desplegarse. Los hooks aplican la política automáticamente.'
+      },
+      {
+        title: 'Hooks para Seguridad',
+        description: 'Hooks pre-commit y pre-deploy verifican el nivel de riesgo. Pueden bloquear merges que tocan paths protegidos, aplicar umbrales de cobertura de tests y prevenir despliegues directos a producción.'
+      },
+      {
+        title: 'Human Decision Agent',
+        description: 'Un agente separado evalúa la criticidad del cambio y decide si requiere intervención humana. No es un simple flag — es un agente que razona sobre el impacto del cambio.'
+      },
+      {
+        title: 'Delegación a No-Desarrolladores',
+        description: 'Marketing puede solicitar cambios simples vía Slack. La fábrica decide si se necesita revisión humana. Delegación segura de trabajo de bajo riesgo que libera a los desarrolladores.'
+      },
+      {
+        title: 'Política como Código',
+        description: 'Las reglas de quién puede hacer qué, cuándo se necesita aprobación y qué paths están protegidos viven como código versionado en el repositorio. La política evoluciona conforme crece la confianza.'
+      },
+      {
+        title: 'Interfaz Slack / No-Dev',
+        description: 'Comando simple o formulario en Slack que crea una tarea estandarizada para la fábrica. El usuario recibe actualizaciones de estado automáticamente sin necesitar entender Git ni código.'
+      },
+    ]}
+    keyTakeaways={[
+      'El humano interviene solo donde el riesgo lo justifica',
+      'Los hooks aplican seguridad de forma automatizada e inevitable',
+      'La clasificación de riesgo equilibra velocidad con seguridad',
+      'La política como código es versionable y auditable',
+      'No-desarrolladores pueden contribuir de forma segura',
+    ]}
+    relatedModules={[
+      { name: 'OMNIO', slug: 'omnio', color: '#7db4e8' },
+      { name: 'AI', slug: 'ai', color: '#97ddd2' },
+      { name: 'ION', slug: 'ion', color: '#b497dd' },
+    ]}
+  />
+</BaseLayout>

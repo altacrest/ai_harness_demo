@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Acerca">
+  <div class="about-page">
+    <a href="/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Dashboard
+    </a>
+
+    <h1 class="page-title">Acerca de NOVACREST</h1>
+
+    <div class="content">
+      <section class="block">
+        <h2>¿Qué es NOVACREST?</h2>
+        <p>
+          NOVACREST es la plataforma interactiva para explorar el ecosistema de <strong>Agentes de IA y Fábricas de Software</strong>.
+          Permite navegar los 6 pilares fundamentales del desarrollo moderno con agentes de forma visual e interactiva.
+        </p>
+      </section>
+
+      <section class="block">
+        <h2>Los 6 Módulos</h2>
+        <div class="modules-list">
+          <div class="module-item" style="--m-color: #c5dd97;">
+            <span class="module-dot"></span>
+            <div>
+              <strong>CORE</strong> — El cerebro. Memoria, RSC, OKF, economía de tokens.
+            </div>
+          </div>
+          <div class="module-item" style="--m-color: #7db4e8;">
+            <span class="module-dot"></span>
+            <div>
+              <strong>OMNIO</strong> — Orquestación. Agentes paralelos, multi-modelo, pipeline.
+            </div>
+          </div>
+          <div class="module-item" style="--m-color: #ddb897;">
+            <span class="module-dot"></span>
+            <div>
+              <strong>XENVIO</strong> — Dominio real. Grafos de conocimiento, Brain, heurísticas.
+            </div>
+          </div>
+          <div class="module-item" style="--m-color: #b497dd;">
+            <span class="module-dot"></span>
+            <div>
+              <strong>ION</strong> — Disciplina de skills. Monorepo, adaptación, calidad.
+            </div>
+          </div>
+          <div class="module-item" style="--m-color: #dd97b4;">
+            <span class="module-dot"></span>
+            <div>
+              <strong>EDGE</strong> — Control. Hooks, risk gates, puertas humanas, política como código.
+            </div>
+          </div>
+          <div class="module-item" style="--m-color: #97ddd2;">
+            <span class="module-dot"></span>
+            <div>
+              <strong>AI</strong> — Fábricas completas. TDD, auditoría, producción a escala.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Tecnologías</h2>
+        <ul>
+          <li><strong>RSC Meta-Harness</strong> — Memoria persistente y contexto compartido</li>
+          <li><strong>Skills Discipline</strong> — Gestión inteligente de skills para agentes</li>
+          <li><strong>Software Factories</strong> — Pipelines de producción con IA</li>
+          <li><strong>Graphify</strong> — Grafos de conocimiento sobre código</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--accent-green);
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .block h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .block p, .block li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .block ul, .block ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .block li {
+    margin-bottom: 0.5rem;
+  }
+
+  .modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .module-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .module-dot {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    border-radius: 50%;
+    background: var(--m-color);
+    margin-top: 4px;
+  }
+
+  .ref-note {
+    margin-top: 0.75rem;
+  }
+
+  .ref-note code {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background: rgba(255,255,255,0.05);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    color: var(--accent-green);
+  }
+</style>

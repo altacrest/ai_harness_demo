@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductPage from '../components/ProductPage.astro';
+import { icons } from '../components/icons';
+---
+
+<BaseLayout title="CORE">
+  <ProductPage
+    title="CORE"
+    subtitle="El cerebro del ecosistema. Memoria persistente, contexto compartido y el meta-harness RSC que conecta todo."
+    accentColor="#c5dd97"
+    icon={icons.core}
+    videoRef="Video 1 — Así se programa con agentes de IA en 2026"
+    concepts={[
+      {
+        title: 'Memoria Persistente',
+        description: 'Las decisiones del proyecto, arquitectura y restricciones se almacenan de forma permanente. El agente nunca pierde el hilo entre sesiones — siempre sabe qué base de datos usas, qué patrones se decidieron y qué está prohibido.'
+      },
+      {
+        title: 'RSC Meta-Harness',
+        description: 'RSC (Repositorio de Sesiones y Contexto) es un meta-harness que se instala sobre cualquier proyecto. Genera memoria estructurada, herramientas reutilizables y restricciones del sistema automáticamente.'
+      },
+      {
+        title: 'OKF — Open Knowledge Format',
+        description: 'Formato abierto de conocimiento que permite a los agentes leer y escribir memoria de forma estandarizada. Cada interacción se documenta y se acumula en la base de conocimiento del proyecto.'
+      },
+      {
+        title: 'Economía de Tokens',
+        description: 'Sin memoria, el agente re-explora el código base cada vez. Con RSC, accede directamente a decisiones y arquitectura documentadas — reducción drástica del tamaño del prompt y del costo.'
+      },
+      {
+        title: 'Restricciones como Características',
+        description: 'Las reglas (nunca push a main, límites de seguridad) se aplican a nivel de harness, no como sugerencias. El agente no puede violar invariantes del proyecto — auditable por diseño.'
+      },
+      {
+        title: 'Sincronización de Equipo',
+        description: 'El harness se comparte mediante un branch sincronizado vía Git. Todo el equipo arranca con el mismo contexto, herramientas y restricciones en menos de 5 minutos.'
+      },
+    ]}
+    keyTakeaways={[
+      'RSC convierte sesiones únicas de agentes en un sistema duradero y compartible',
+      'Memoria + documentación + restricciones = fiabilidad',
+      'Prerequisito esencial para escalar más allá del chat individual',
+      'Se adapta a nuevos modelos y patrones de interacción',
+      'Código abierto disponible en GitHub',
+    ]}
+    relatedModules={[
+      { name: 'OMNIO', slug: 'omnio', color: '#7db4e8' },
+      { name: 'ION', slug: 'ion', color: '#b497dd' },
+      { name: 'AI', slug: 'ai', color: '#97ddd2' },
+    ]}
+  />
+</BaseLayout>

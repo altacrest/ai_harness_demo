@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductPage from '../components/ProductPage.astro';
+import { icons } from '../components/icons';
+---
+
+<BaseLayout title="AI">
+  <ProductPage
+    title="AI"
+    subtitle="Fábricas de Software completas. El estado del arte: de chatear con agentes a pipelines de producción auditables que funcionan mientras duermes."
+    accentColor="#97ddd2"
+    icon={icons.ai}
+    videoRef="Video 3 — Programar con agentes ya no basta: monta tu Software Factory"
+    concepts={[
+      {
+        title: '¿Qué es una Fábrica de Software?',
+        description: 'Análoga a una fábrica de autos: acero entra, autos salen. En software: issues, errores, tareas entran → código de producción sale. Mezcla de pasos deterministas y agentes no-deterministas, todo repetible y auditable.'
+      },
+      {
+        title: 'El Cerebro Crítico',
+        description: 'Memoria persistente del proyecto que sabe qué BD usas, las decisiones de arquitectura y las restricciones. Sin cerebro, los agentes pierden el hilo e inventan inconsistencias — es el fundamento de todo.'
+      },
+      {
+        title: 'Flujo Completo de la Fábrica',
+        description: 'Entrada (Sentry/GitHub/Slack) → Escritor de Specs (Opus+Cerebro) → Constructor (Opus+TDD+Branch) → 4 Revisores paralelos → Aprobador (loop) → Human Decision Agent → PR o Deploy.'
+      },
+      {
+        title: 'TDD Integrado',
+        description: 'El constructor escribe tests ANTES de la implementación. Los tests se convierten en parte permanente del cerebro. La protección contra regresiones es automática y los revisores confían en que los tests pasan.'
+      },
+      {
+        title: 'Trazabilidad Completa',
+        description: 'Cada paso deja una traza: timestamp de entrada, spec almacenada, hash de commit + tests, comentarios de revisores con modelo y razonamiento, decisión del aprobador + resultado del human gate.'
+      },
+      {
+        title: 'Escalando Más Allá del Código',
+        description: 'Cualquier proceso repetible y auditable puede convertirse en fábrica: creación de contenido, marketing, triaje de soporte. Los mismos principios ya se aplican a edición de video con Opus 5.'
+      },
+      {
+        title: 'Camino de Evolución',
+        description: 'Inicio: un solo agente + memoria → Agregar spec + constructor TDD → Un revisor → Revisores paralelos especializados → Puerta humana basada en riesgo → Fábrica de software completa.'
+      },
+    ]}
+    keyTakeaways={[
+      'Programar con agentes es lo básico — las fábricas son el siguiente nivel',
+      'Memoria + proceso + especialización + puertas humanas selectivas = producción',
+      'El cuello de botella ya no es codear, es definir procesos claros',
+      'Las empresas como OpenAI y Stripe ya operan a esta escala',
+      'Las herramientas y patrones ya están aquí — construye la fábrica',
+    ]}
+    relatedModules={[
+      { name: 'CORE', slug: 'core', color: '#c5dd97' },
+      { name: 'OMNIO', slug: 'omnio', color: '#7db4e8' },
+      { name: 'EDGE', slug: 'edge', color: '#dd97b4' },
+    ]}
+  />
+</BaseLayout>

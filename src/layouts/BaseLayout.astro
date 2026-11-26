@@ -1,0 +1,176 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Plataforma de aprendizaje sobre harnesses, skills y fábricas de software con IA' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} — NOVACREST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <a href="/" class="logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2L28 9v14l-12 7L4 23V9l12-7z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M16 2v28M4 9l24 14M28 9L4 23" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="16" cy="16" r="4" fill="currentColor" opacity="0.8"/>
+        </svg>
+        <span class="logo-text">NOVACREST</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Dashboard</a>
+        <a href="/about" class="nav-link">Acerca</a>
+      </div>
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <p>NOVACREST — Curso de Agentes IA & Fábricas de Software · 2026</p>
+        <p class="footer-sub">Plataforma educativa · Construido con Astro</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* NOVACREST palette - dark elegant */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --text-primary: #e8e6e1;
+    --text-secondary: #9c9a94;
+    --text-muted: #6b6860;
+    --accent-green: #c5dd97;
+    --accent-blue: #7db4e8;
+    --accent-purple: #b497dd;
+    --accent-orange: #ddb897;
+    --accent-pink: #dd97b4;
+    --accent-cyan: #97ddd2;
+    --border-color: #2a2a35;
+    --border-glow: rgba(197, 221, 151, 0.15);
+    --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    font-family: var(--font-sans);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    width: 100%;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(16px);
+    background: rgba(10, 10, 15, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--accent-green);
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--accent-green);
+  }
+
+  footer {
+    border-top: 1px solid var(--border-color);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .footer-inner p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .footer-sub {
+    margin-top: 0.3rem;
+    font-size: 0.7rem !important;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-primary); }
+  ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+
+  /* Animated gradient background */
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+</style>

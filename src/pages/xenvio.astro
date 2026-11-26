@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductPage from '../components/ProductPage.astro';
+import { icons } from '../components/icons';
+---
+
+<BaseLayout title="XENVIO">
+  <ProductPage
+    title="XENVIO"
+    subtitle="Sistema de envíos inteligente. Ejemplo real de dominio donde se aplican harnesses, grafos de conocimiento y automatización de QA."
+    accentColor="#ddb897"
+    icon={icons.xenvio}
+    videoRef="Caso práctico — Dominio Shipedge aplicado al ecosistema"
+    concepts={[
+      {
+        title: 'Dominio Real como Laboratorio',
+        description: 'XENVIO (plataforma de envíos/shipping) sirve como caso de estudio real. Los conceptos teóricos de harnesses y fábricas se ven en acción sobre un producto con miles de usuarios.'
+      },
+      {
+        title: 'Grafos de Conocimiento (Graphify)',
+        description: 'El código base se transforma en un grafo navegable: nodos (archivos, clases, funciones) y aristas (dependencias, herencia, llamadas). Los "god nodes" revelan los puntos críticos del sistema.'
+      },
+      {
+        title: 'Brain — Memoria de QA',
+        description: 'Los módulos del cerebro acumulan conocimiento de tickets previos. Order.md (292 nodos), User.md (244 nodos), Address.md (190 nodos) — cada módulo mapea un cluster del grafo.'
+      },
+      {
+        title: 'Heurísticas de Dominio',
+        description: 'Reglas aprendidas del dominio: cómo funciona el carrier reordering, qué cambia con webhook signatures, dónde fallan las integraciones más frecuentemente.'
+      },
+      {
+        title: 'Backend + Frontend Unificado',
+        description: 'x5.xenvio (Rails/Grape, 5690 nodos) + x5.angular (Angular, 1936 nodos) = grafo unificado de 7626 nodos. El cerebro cruza ambos para entender impactos end-to-end.'
+      },
+      {
+        title: 'Circuit Breaker',
+        description: 'Cuando el sistema detecta un patrón de fallo (ej: carrier siempre falla después de reorder), activa un circuit breaker que alerta antes de que el agente proponga la misma solución rota.'
+      },
+    ]}
+    keyTakeaways={[
+      'Un dominio real es el mejor laboratorio para entender harnesses',
+      'Los grafos de conocimiento revelan la arquitectura verdadera del código',
+      'El Brain acumula sabiduría de ticket en ticket',
+      'Las heurísticas se refinan con cada ciclo de QA',
+      'El grafo unificado permite análisis de impacto cross-stack',
+    ]}
+    relatedModules={[
+      { name: 'CORE', slug: 'core', color: '#c5dd97' },
+      { name: 'AI', slug: 'ai', color: '#97ddd2' },
+      { name: 'OMNIO', slug: 'omnio', color: '#7db4e8' },
+    ]}
+  />
+</BaseLayout>
