@@ -51,3 +51,17 @@ Riesgo para el repo: el binario hermano de `scripts/bin/` no lleva hash y podrí
 - **Gen Agent Trust Hub: Pass / SAFE.** Señala, sin bloquear, ejecución remota del binario, persistencia (instala hooks en `.claude/settings.json` y similares) y escalado de permisos de sandbox en Codex.
 
 **Regla para el equipo:** no aceptar sin revisar que impeccable añada hooks a `.claude/settings.json`, `.cursor/` o `.codex/`, ni el envío de informes a su servicio externo. Ambas cosas cambian la configuración compartida o sacan datos fuera del proyecto.
+
+## [2026-11-26] Corrección: design restaurada, subagentes retirados, regla de UI
+
+**Por qué:** `design` está en el suelo obligatorio de rsc 4.2.1 y volvía con cada `sync`. Retirarla dejaba un `[HIGH]` permanente en `doctor` y cambios constantes en el harness. Se mantiene instalada y el solapamiento con impeccable se resuelve con una regla, no desinstalando.
+
+**Hecho:**
+- `design` restaurada con `npx @ericrisco/rsc@4.2.1 add design --target <t>` en antigravity, claude, gemini y opencode.
+- Subagentes `developer`, `finding-verifier`, `refuter-correctness`, `refuter-security` y `refuter-tests` retirados. Los había creado `rsc uninstall`, que recalcula los agentes desde las skills e ignora `onboarding.plan.policy.agents: []` (el plan los tenía aplazados), un fallo de rsc 4.2.1. El mismo `rsc add` los retiró, porque `add` sí aplica la política. `.rsc-state.json` -> `agents: []` en los tres targets que tienen agentes. `rsc agents reset` no sirve para esto: reescribe los agentes, no los quita.
+- Regla en `CLAUDE.md`, `AGENTS.md` y `GEMINI.md`, fuera de los bloques `rsc-suggest`: "Para cualquier trabajo de UI (diseño, revisión, pulido, accesibilidad visual) usa la skill impeccable y respeta PRODUCT.md y DESIGN.md; no uses design". `PRODUCT.md` y `DESIGN.md` aún no existen.
+- `.gitignore`: `.impeccable/config.json` se comparte con el equipo. Se ignoran solo `.impeccable/config.local.json`, `.impeccable/bin/` y `.claude/skills/impeccable/scripts/bin/`. Verificado con `git check-ignore`.
+
+**Verificación (`rsc doctor` 4.2.1):** "Harness health: healthy" en antigravity, claude, gemini y opencode, sin ningún HIGH, MEDIUM ni LOW. `ownSkills` muestra `impeccable` presente en los cuatro y nada pendiente.
+
+La entrada anterior sobre la retirada de `design` queda reemplazada por esta. Se conserva por ser un log append-only.
