@@ -1,9 +1,7 @@
 import { defineMiddleware } from 'astro:middleware';
 
-// IPs permitidas (tu VPN / oficina)
-const ALLOWED_IPS = [
-  '74.208.212.219',
-];
+// IPs permitidas desde variable de entorno (no expuestas en el código)
+const ALLOWED_IPS = (process.env.ALLOWED_IPS || '').split(',').map((ip) => ip.trim()).filter(Boolean);
 
 export const onRequest = defineMiddleware(async ({ request, clientAddress }, next) => {
   // Obtener IP del cliente
