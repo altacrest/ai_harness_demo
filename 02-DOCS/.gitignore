@@ -1,0 +1,6 @@
+wiki/dashboard.html
+audits/*.html
+inbox/_processed/*
+!inbox/_processed/.gitkeep
+.obsidian/workspace*.json
+.obsidian/cache

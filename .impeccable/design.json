@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-26T20:45:47+00:00",
+  "title": "Design System: NOVACREST",
+  "extensions": {
+    "colorMeta": {
+      "night-deck": {
+        "role": "neutral",
+        "displayName": "Night Deck",
+        "canonical": "#0a0a0f",
+        "tonalRamp": [
+          "oklch(15% 0.005 285.0)",
+          "oklch(25% 0.007 285.0)",
+          "oklch(35% 0.008 285.0)",
+          "oklch(48% 0.010 285.0)",
+          "oklch(60% 0.010 285.0)",
+          "oklch(72% 0.008 285.0)",
+          "oklch(84% 0.007 285.0)",
+          "oklch(95% 0.005 285.0)"
+        ]
+      },
+      "panel-slate": {
+        "role": "neutral",
+        "displayName": "Panel Slate",
+        "canonical": "#16161f",
+        "tonalRamp": [
+          "oklch(15% 0.009 284.7)",
+          "oklch(25% 0.011 284.7)",
+          "oklch(35% 0.013 284.7)",
+          "oklch(48% 0.016 284.7)",
+          "oklch(60% 0.017 284.7)",
+          "oklch(72% 0.014 284.7)",
+          "oklch(84% 0.011 284.7)",
+          "oklch(95% 0.009 284.7)"
+        ]
+      },
+      "panel-slate-hover": {
+        "role": "neutral",
+        "displayName": "Panel Slate Hover",
+        "canonical": "#1c1c28",
+        "tonalRamp": [
+          "oklch(15% 0.011 284.5)",
+          "oklch(25% 0.014 284.5)",
+          "oklch(35% 0.017 284.5)",
+          "oklch(48% 0.021 284.5)",
+          "oklch(60% 0.022 284.5)",
+          "oklch(72% 0.018 284.5)",
+          "oklch(84% 0.015 284.5)",
+          "oklch(95% 0.011 284.5)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#2a2a35",
+        "tonalRamp": [
+          "oklch(15% 0.010 285.1)",
+          "oklch(25% 0.012 285.1)",
+          "oklch(35% 0.015 285.1)",
+          "oklch(48% 0.018 285.1)",
+          "oklch(60% 0.019 285.1)",
+          "oklch(72% 0.016 285.1)",
+          "oklch(84% 0.013 285.1)",
+          "oklch(95% 0.010 285.1)"
+        ]
+      },
+      "console-ink": {
+        "role": "neutral",
+        "displayName": "Console Ink",
+        "canonical": "#e8e6e1",
+        "tonalRamp": [
+          "oklch(15% 0.003 88.6)",
+          "oklch(25% 0.004 88.6)",
+          "oklch(35% 0.005 88.6)",
+          "oklch(48% 0.006 88.6)",
+          "oklch(60% 0.007 88.6)",
+          "oklch(72% 0.006 88.6)",
+          "oklch(84% 0.004 88.6)",
+          "oklch(95% 0.003 88.6)"
+        ]
+      },
+      "console-ink-secondary": {
+        "role": "neutral",
+        "displayName": "Console Ink Secondary",
+        "canonical": "#9c9a94",
+        "tonalRamp": [
+          "oklch(15% 0.004 91.5)",
+          "oklch(25% 0.006 91.5)",
+          "oklch(35% 0.007 91.5)",
+          "oklch(48% 0.008 91.5)",
+          "oklch(60% 0.008 91.5)",
+          "oklch(72% 0.007 91.5)",
+          "oklch(84% 0.006 91.5)",
+          "oklch(95% 0.004 91.5)"
+        ]
+      },
+      "console-ink-muted": {
+        "role": "neutral",
+        "displayName": "Console Ink Muted",
+        "canonical": "#6b6860",
+        "tonalRamp": [
+          "oklch(15% 0.006 89.8)",
+          "oklch(25% 0.008 89.8)",
+          "oklch(35% 0.010 89.8)",
+          "oklch(48% 0.012 89.8)",
+          "oklch(60% 0.012 89.8)",
+          "oklch(72% 0.010 89.8)",
+          "oklch(84% 0.008 89.8)",
+          "oklch(95% 0.006 89.8)"
+        ]
+      },
+      "signal-lime": {
+        "role": "primary",
+        "displayName": "Signal Lime",
+        "canonical": "#c5dd97",
+        "tonalRamp": [
+          "oklch(15% 0.047 123.8)",
+          "oklch(25% 0.059 123.8)",
+          "oklch(35% 0.071 123.8)",
+          "oklch(48% 0.087 123.8)",
+          "oklch(60% 0.089 123.8)",
+          "oklch(72% 0.075 123.8)",
+          "oklch(84% 0.060 123.8)",
+          "oklch(95% 0.047 123.8)"
+        ]
+      },
+      "signal-cyan": {
+        "role": "secondary",
+        "displayName": "Signal Cyan",
+        "canonical": "#97ddd2",
+        "tonalRamp": [
+          "oklch(15% 0.035 183.7)",
+          "oklch(25% 0.044 183.7)",
+          "oklch(35% 0.054 183.7)",
+          "oklch(48% 0.065 183.7)",
+          "oklch(60% 0.067 183.7)",
+          "oklch(72% 0.056 183.7)",
+          "oklch(84% 0.045 183.7)",
+          "oklch(95% 0.035 183.7)"
+        ]
+      },
+      "module-core": {
+        "role": "tertiary",
+        "displayName": "Sky Relay",
+        "canonical": "#4FC3F7",
+        "tonalRamp": [
+          "oklch(15% 0.062 231.1)",
+          "oklch(25% 0.078 231.1)",
+          "oklch(35% 0.095 231.1)",
+          "oklch(48% 0.116 231.1)",
+          "oklch(60% 0.119 231.1)",
+          "oklch(72% 0.099 231.1)",
+          "oklch(84% 0.080 231.1)",
+          "oklch(95% 0.062 231.1)"
+        ]
+      },
+      "module-omnio": {
+        "role": "tertiary",
+        "displayName": "Route Blue",
+        "canonical": "#7db4e8",
+        "tonalRamp": [
+          "oklch(15% 0.047 247.8)",
+          "oklch(25% 0.059 247.8)",
+          "oklch(35% 0.071 247.8)",
+          "oklch(48% 0.087 247.8)",
+          "oklch(60% 0.089 247.8)",
+          "oklch(72% 0.074 247.8)",
+          "oklch(84% 0.060 247.8)",
+          "oklch(95% 0.047 247.8)"
+        ]
+      },
+      "module-xenvio": {
+        "role": "tertiary",
+        "displayName": "Parcel Sand",
+        "canonical": "#ddb897",
+        "tonalRamp": [
+          "oklch(15% 0.030 63.5)",
+          "oklch(25% 0.038 63.5)",
+          "oklch(35% 0.046 63.5)",
+          "oklch(48% 0.056 63.5)",
+          "oklch(60% 0.058 63.5)",
+          "oklch(72% 0.048 63.5)",
+          "oklch(84% 0.039 63.5)",
+          "oklch(95% 0.030 63.5)"
+        ]
+      },
+      "module-ion": {
+        "role": "tertiary",
+        "displayName": "Circuit Lavender",
+        "canonical": "#b497dd",
+        "tonalRamp": [
+          "oklch(15% 0.051 302.9)",
+          "oklch(25% 0.064 302.9)",
+          "oklch(35% 0.077 302.9)",
+          "oklch(48% 0.095 302.9)",
+          "oklch(60% 0.097 302.9)",
+          "oklch(72% 0.081 302.9)",
+          "oklch(84% 0.065 302.9)",
+          "oklch(95% 0.051 302.9)"
+        ]
+      },
+      "module-edge": {
+        "role": "tertiary",
+        "displayName": "Floor Green",
+        "canonical": "#66BB6A",
+        "tonalRamp": [
+          "oklch(15% 0.070 144.9)",
+          "oklch(25% 0.088 144.9)",
+          "oklch(35% 0.106 144.9)",
+          "oklch(48% 0.129 144.9)",
+          "oklch(60% 0.133 144.9)",
+          "oklch(72% 0.111 144.9)",
+          "oklch(84% 0.089 144.9)",
+          "oklch(95% 0.070 144.9)"
+        ]
+      },
+      "module-ai": {
+        "role": "tertiary",
+        "displayName": "Insight Teal",
+        "canonical": "#97ddd2",
+        "tonalRamp": [
+          "oklch(15% 0.035 183.7)",
+          "oklch(25% 0.044 183.7)",
+          "oklch(35% 0.054 183.7)",
+          "oklch(48% 0.065 183.7)",
+          "oklch(60% 0.067 183.7)",
+          "oklch(72% 0.056 183.7)",
+          "oklch(84% 0.045 183.7)",
+          "oklch(95% 0.035 183.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titular del hero, con degradado Signal Lime a Signal Cyan."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Nombre del módulo en su página."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nombre del módulo en la ficha."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descripciones de fichas y conceptos."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Badge del hero y etiquetas de métricas, en mayúsculas."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Cifras del hero y métricas."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Chips de tecnología."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lift-accent-halo",
+        "value": "0 8px 40px rgba(0,0,0,0.4), 0 0 60px color-mix(in srgb, var(--card-accent) 10%, transparent)",
+        "purpose": "Solo en el hover de la ficha de producto."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-card",
+        "value": "0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Elevación, resplandor y flecha de la ficha de producto."
+      },
+      {
+        "name": "ease-quick",
+        "value": "0.2s",
+        "purpose": "Color de enlaces y borde de las fichas de concepto."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "768px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Puerta de entrada a cada módulo; se eleva y se ilumina con su acento en hover.",
+      "html": "<a class=\"ds-product-card\" href=\"#\" style=\"--card-accent:#b497dd\"><span class=\"ds-card-glow\"></span><h3 class=\"ds-card-title\">ION</h3><p class=\"ds-card-desc\">La plataforma de integración AI-native.</p><span class=\"ds-tag\">iPaaS</span></a>",
+      "css": ":host{--bg-card:#16161f;--bg-card-hover:#1c1c28;--border-color:#2a2a35;--text-primary:#e8e6e1;--text-secondary:#9c9a94;--text-muted:#6b6860;--accent-green:#c5dd97;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',monospace;}.ds-product-card{position:relative;display:flex;flex-direction:column;gap:.75rem;padding:1.75rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;color:var(--text-primary);text-decoration:none;font-family:var(--font-sans);overflow:hidden;transition:all .35s cubic-bezier(.4,0,.2,1)}.ds-product-card:hover,.ds-product-card:focus-visible{border-color:var(--card-accent);background:var(--bg-card-hover);transform:translateY(-4px);box-shadow:0 8px 40px rgba(0,0,0,.4),0 0 60px color-mix(in srgb,var(--card-accent) 10%,transparent);outline:none}.ds-card-glow{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--card-accent),transparent);opacity:0;transition:opacity .35s}.ds-product-card:hover .ds-card-glow{opacity:1}.ds-card-title{font-size:1.35rem;font-weight:700;letter-spacing:.05em;margin:0}.ds-card-desc{font-size:.875rem;line-height:1.6;color:var(--text-secondary);margin:0}.ds-tag{align-self:flex-start;font:500 .7rem var(--font-mono);padding:.15rem .5rem;border-radius:4px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:var(--text-muted)}"
+    },
+    {
+      "name": "Concept Card",
+      "kind": "card",
+      "refersTo": "concept-card",
+      "description": "Concepto clave numerado en la página de un módulo.",
+      "html": "<div class=\"ds-concept\" style=\"--page-accent:#b497dd\"><span class=\"ds-concept-n\">01</span><h3>Visual Flows (ionFlow)</h3><p>Motor de workflows visuales.</p></div>",
+      "css": ":host{--bg-card:#16161f;--bg-card-hover:#1c1c28;--border-color:#2a2a35;--text-primary:#e8e6e1;--text-secondary:#9c9a94;--text-muted:#6b6860;--accent-green:#c5dd97;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',monospace;}.ds-concept{position:relative;padding:1.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:8px;font-family:var(--font-sans);transition:border-color .2s}.ds-concept:hover{border-color:var(--page-accent)}.ds-concept h3{font-size:1rem;font-weight:600;margin:0 0 .4rem;color:var(--text-primary)}.ds-concept p{font-size:.875rem;line-height:1.6;color:var(--text-secondary);margin:0}.ds-concept-n{position:absolute;top:1.25rem;right:1.5rem;font:600 .75rem var(--font-mono);color:var(--page-accent);opacity:.4}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Chip de tecnología en mono.",
+      "html": "<span class=\"ds-tag\">Rate Shopping</span>",
+      "css": ":host{--bg-card:#16161f;--bg-card-hover:#1c1c28;--border-color:#2a2a35;--text-primary:#e8e6e1;--text-secondary:#9c9a94;--text-muted:#6b6860;--accent-green:#c5dd97;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',monospace;}.ds-tag{font:500 .7rem var(--font-mono);padding:.15rem .5rem;border-radius:4px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:var(--text-muted)}"
+    },
+    {
+      "name": "Hero Badge",
+      "kind": "chip",
+      "refersTo": "hero-badge",
+      "description": "Rótulo de sección en Signal Lime.",
+      "html": "<span class=\"ds-badge\">ECOSISTEMA NOVACREST</span>",
+      "css": ":host{--bg-card:#16161f;--bg-card-hover:#1c1c28;--border-color:#2a2a35;--text-primary:#e8e6e1;--text-secondary:#9c9a94;--text-muted:#6b6860;--accent-green:#c5dd97;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',monospace;}.ds-badge{display:inline-block;font:600 .7rem var(--font-sans);letter-spacing:.2em;color:var(--accent-green);border:1px solid rgba(197,221,151,.3);padding:.3rem 1rem;border-radius:20px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Barra superior sticky con blur.",
+      "html": "<nav class=\"ds-nav\"><strong class=\"ds-logo\">NOVACREST</strong><div><a href=\"#\" class=\"ds-nav-link\">Dashboard</a><a href=\"#\" class=\"ds-nav-link\">Acerca</a></div></nav>",
+      "css": ":host{--bg-card:#16161f;--bg-card-hover:#1c1c28;--border-color:#2a2a35;--text-primary:#e8e6e1;--text-secondary:#9c9a94;--text-muted:#6b6860;--accent-green:#c5dd97;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',monospace;}.ds-nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;border-bottom:1px solid var(--border-color);background:rgba(10,10,15,.85);backdrop-filter:blur(16px);font-family:var(--font-sans)}.ds-logo{color:var(--text-primary);letter-spacing:.08em}.ds-nav div{display:flex;gap:1.5rem}.ds-nav-link{font-size:.875rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:color .2s}.ds-nav-link:hover,.ds-nav-link:focus-visible{color:var(--accent-green);outline:none}"
+    },
+    {
+      "name": "Related Module Link",
+      "kind": "custom",
+      "refersTo": "related-link",
+      "description": "Píldora hacia otro módulo, con punto de su color.",
+      "html": "<a class=\"ds-related\" href=\"#\" style=\"--rel-color:#4FC3F7\"><span class=\"ds-dot\"></span>CORE</a>",
+      "css": ":host{--bg-card:#16161f;--bg-card-hover:#1c1c28;--border-color:#2a2a35;--text-primary:#e8e6e1;--text-secondary:#9c9a94;--text-muted:#6b6860;--accent-green:#c5dd97;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',monospace;}.ds-related{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border:1px solid var(--border-color);border-radius:20px;font:500 .85rem var(--font-sans);color:var(--text-secondary);text-decoration:none;transition:all .2s}.ds-related:hover,.ds-related:focus-visible{border-color:var(--rel-color);color:var(--rel-color);outline:none}.ds-dot{width:8px;height:8px;border-radius:50%;background:var(--rel-color)}"
+    },
+    {
+      "name": "Hero Metric",
+      "kind": "custom",
+      "refersTo": "hero-metric",
+      "description": "Cifra confirmada en mono sobre etiqueta.",
+      "html": "<div class=\"ds-stat\"><span class=\"ds-stat-v\">$1.7B+</span><span class=\"ds-stat-l\">GMV Procesado</span></div>",
+      "css": ":host{--bg-card:#16161f;--bg-card-hover:#1c1c28;--border-color:#2a2a35;--text-primary:#e8e6e1;--text-secondary:#9c9a94;--text-muted:#6b6860;--accent-green:#c5dd97;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',monospace;}.ds-stat{display:inline-flex;flex-direction:column;align-items:center;gap:.25rem}.ds-stat-v{font:800 2rem var(--font-mono);color:var(--accent-green)}.ds-stat-l{font:400 .75rem var(--font-sans);text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Control Tower",
+    "overview": "NOVACREST se ve como la sala de control nocturna de una operación logística. Fondo casi negro, paneles de pizarra apenas más claros, texto cálido de consola y señales de color que se encienden donde hay actividad. Las cifras se leen como en un panel de instrumentos, en monoespaciada y grandes. Todo lo demás guarda silencio para que la señal destaque.\n\nLa densidad es media: fichas amplias con aire interno (1.75rem) sobre una retícula que se adapta sola. El sistema es oscuro por diseño, sin tema claro. Los componentes son táctiles y vivos: al pasar el ratón se elevan, se iluminan con el color de su módulo y muestran una flecha que invita a entrar.",
+    "keyCharacteristics": [
+      "Tema oscuro único, con capas tonales (Night Deck, Panel Slate) en lugar de bordes gruesos.",
+      "Signal Lime como voz del sistema; seis colores de módulo libres para identidad y decoración.",
+      "Métricas y tags en JetBrains Mono: el dato se reconoce por su tipografía.",
+      "Interacción con energía: elevación, resplandor de acento y línea de luz superior en hover.",
+      "Firma visual: titular con degradado lima a turquesa y resplandor de color en las fichas."
+    ],
+    "rules": [
+      {
+        "name": "The Night Shift Rule",
+        "body": "Solo existe el tema oscuro. Una superficie nueva parte de Night Deck y sube por capas tonales (Panel Slate, luego Panel Slate Hover); nunca introduce un fondo claro.",
+        "section": "colors"
+      },
+      {
+        "name": "The Free Signal Rule",
+        "body": "Los colores de módulo son decorativos y se pueden combinar libremente. Signal Lime sigue siendo la voz del sistema en la navegación y en el hero.",
+        "section": "colors"
+      },
+      {
+        "name": "The Instrument Readout Rule",
+        "body": "Toda cifra (GMV, labels, latencia, porcentajes) va en JetBrains Mono. Una cifra en Inter es un error.",
+        "section": "typography"
+      },
+      {
+        "name": "The Caps Name Rule",
+        "body": "Los nombres de producto (NOVACREST, CORE, OMNIO…) van en mayúsculas y con tracking abierto (0.05–0.08em).",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "Nada proyecta sombra en reposo. La sombra es la respuesta a la interacción.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** dar a cada ficha y página de módulo su color mediante `--card-accent` / `--page-accent`.",
+      "**Do** mantener el titular del hero con degradado de Signal Lime a Signal Cyan y el resplandor de color de las fichas. Son la firma del sistema.",
+      "**Do** poner toda cifra en JetBrains Mono (The Instrument Readout Rule).",
+      "**Do** subir la profundidad por capas tonales y reservar la sombra para el hover (The Flat-At-Rest Rule).",
+      "**Do** usar los logos oficiales de `public/logos/` para identificar cada módulo."
+    ],
+    "donts": [
+      "**Don't** introducir un tema claro ni fondos claros (The Night Shift Rule).",
+      "**Don't** usar Console Ink Muted para texto que haya que leer: a 0.7–0.8rem no llega al AA (3.55:1). Es deuda conocida en tags, etiquetas de métricas y footer, pendiente de un pulido.",
+      "**Don't** añadir sombras en reposo ni bordes de más de 1px.",
+      "**Don't** escribir nombres de producto en minúsculas."
+    ]
+  }
+}
