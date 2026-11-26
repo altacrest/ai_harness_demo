@@ -1,5 +1,9 @@
 # Wiki Log
 
+## [2026-11-26] impeccable | PRODUCT.md confirmado, DESIGN.md + design.json, hook on
+
+Ver harness/decisions.md.
+
 ## [2026-11-26] harness | design restaurada, subagentes retirados, regla UI impeccable
 
 rsc doctor healthy sin HIGH en los 4 targets. Ver harness/decisions.md.

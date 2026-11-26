@@ -65,3 +65,20 @@ Riesgo para el repo: el binario hermano de `scripts/bin/` no lleva hash y podrí
 **Verificación (`rsc doctor` 4.2.1):** "Harness health: healthy" en antigravity, claude, gemini y opencode, sin ningún HIGH, MEDIUM ni LOW. `ownSkills` muestra `impeccable` presente en los cuatro y nada pendiente.
 
 La entrada anterior sobre la retirada de `design` queda reemplazada por esta. Se conserva por ser un log append-only.
+
+## [2026-11-26] impeccable: PRODUCT.md, DESIGN.md y hook de diseño
+
+- `PRODUCT.md` (raíz) confirmado: posicionamiento "plataforma inteligente de orquestación logística"; la métrica de éxito es que el visitante entienda qué hace cada módulo; sin CTA comercial por ahora; todas las métricas del sitio se pueden mostrar (incluidas 50+ carriers, 99.97% e ISO 27001).
+- `DESIGN.md` (raíz) generado con `impeccable document` en modo scan sobre el código actual. North Star: "The Control Tower". Los acentos de módulo son decorativos y libres. El titular con degradado y el resplandor de las fichas se mantienen como firma. Componentes táctiles y vivos. El archivo complementario está en `.impeccable/design.json`.
+- `impeccable hooks on`:
+  - Escribió `.impeccable/config.json` (compartido, en git).
+  - Escribió `.impeccable/config.local.json`, el consentimiento local, ignorado por git.
+  - Instaló el hook en `.claude/settings.local.json`, que también ignora git: **cada miembro del equipo debe ejecutar `impeccable hooks on` en su máquina**.
+  - No lo instaló para Gemini, Antigravity ni OpenCode.
+- Excepción del detector: `gradient-text` solo en `src/pages/index.astro`, porque el usuario confirmó que es la firma del sistema.
+- Abierto:
+  - 15 avisos de deriva del sistema de diseño en `src/`: tamaños de fuente fuera de la escala, `rgba(255,255,255,0.08)` y un radio de 3px.
+  - `overused-font` (Inter).
+  - `console-ink-muted` no llega al AA (3.55:1).
+  - `doctor` pide `design-md-sprawl` (compactar `DESIGN.md`), pendiente de consentimiento.
+- Regla de UI añadida también en `.antigravity/AGENTS.md`, fuera del bloque rsc.
