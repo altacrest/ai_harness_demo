@@ -1,5 +1,9 @@
 # Wiki Log
 
+## [2026-11-26] harness | impeccable ownSkill + design retirada
+
+impeccable enlazada en antigravity/gemini/opencode, declarada en ownSkills, design desinstalada (sync la reinstala: suelo de rsc 4.2.1), binarios del motor ignorados en git. Ver harness/decisions.md.
+
 ## [2026-11-26] install | skill impeccable local (.claude/skills/impeccable)
 
 Instalada desde pbakaus/impeccable solo para este proyecto. Ver harness/decisions.md.
