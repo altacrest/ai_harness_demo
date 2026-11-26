@@ -1,15 +1,32 @@
 import { defineMiddleware } from 'astro:middleware';
 
-// IPs permitidas desde variable de entorno (no expuestas en el código)
-const ALLOWED_IPS = (process.env.ALLOWED_IPS || '').split(',').map((ip) => ip.trim()).filter(Boolean);
+// IPs permitidas desde variable de entorno
+const ALLOWED_IPS = (process.env.ALLOWED_IPS || '')
+  .split(',')
+  .map((ip) => ip.trim())
+  .filter(Boolean);
 
-export const onRequest = defineMiddleware(async ({ request, clientAddress }, next) => {
-  // Obtener IP del cliente
-  const ip =
-    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    request.headers.get('x-real-ip') ||
-    clientAddress ||
-    '';
+export const onRequest = defineMiddleware(async (context, next) => {
+  // Si no hay IPs configuradas, permitir todo (dev mode)
+  if (ALLOWED_IPS.length === 0) {
+    return next();
+  }
+
+  // Obtener IP del cliente de los headers de Vercel
+  let ip = '';
+  try {
+    ip =
+      context.request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      context.request.headers.get('x-real-ip') ||
+      context.clientAddress ||
+      '';
+  } catch {
+    // clientAddress puede no estar disponible
+    ip =
+      context.request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      context.request.headers.get('x-real-ip') ||
+      '';
+  }
 
   // Permitir acceso si la IP está en la lista
   if (ALLOWED_IPS.some((allowed) => ip.includes(allowed))) {
