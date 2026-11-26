@@ -1,61 +1,60 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
-import { icons } from '../components/icons';
 
 const products = [
   {
     name: 'CORE',
     slug: 'core',
-    description: 'El cerebro del harness. Memoria persistente, contexto compartido y el meta-harness RSC que conecta todo el ecosistema.',
-    icon: icons.core,
-    accentColor: '#c5dd97',
-    tags: ['RSC', 'Memoria', 'OKF', 'Contexto'],
+    description: 'Full WMS para centros de distribución y 3PLs. Arquitectura multi-tenant con workflows específicos por cliente, automatización de facturación e integración robótica.',
+    logo: '/logos/core.svg',
+    accentColor: '#4FC3F7',
+    tags: ['WMS', '3PL', 'Multi-Tenant', 'Robotics'],
     status: 'active' as const,
   },
   {
     name: 'OMNIO',
     slug: 'omnio',
-    description: 'Orquestación de agentes multi-modelo. Revisores paralelos, aprobadores y el flujo completo de la fábrica de software.',
-    icon: icons.omnio,
+    description: 'Gestión distribuida de órdenes con sincronización de inventario en tiempo real y enrutamiento inteligente por proximidad. Precisión zero-error en todos los canales.',
+    logo: '/logos/omnio.svg',
     accentColor: '#7db4e8',
-    tags: ['MAS', 'Orquestación', 'Pipeline', 'Multi-Modelo'],
+    tags: ['OMS', 'Proximity Routing', 'Order Splitting', 'Go + Dragonfly'],
     status: 'active' as const,
   },
   {
     name: 'XENVIO',
     slug: 'xenvio',
-    description: 'Sistema de envíos inteligente. Ejemplo real de dominio donde se aplican harnesses, grafos de conocimiento y QA automatizado.',
-    icon: icons.xenvio,
+    description: 'Rate shopping multi-carrier y generación de etiquetas — 50+ carriers. Rate shopping en tiempo real entre carriers regionales, internacionales y principales.',
+    logo: '/logos/xenvio.svg',
     accentColor: '#ddb897',
-    tags: ['Shipping', 'Dominio', 'Graphify', 'API'],
+    tags: ['Shipping', 'Rate Shopping', 'Labels', '50+ Carriers'],
     status: 'active' as const,
   },
   {
     name: 'ION',
     slug: 'ion',
-    description: 'Disciplina de Skills. Cómo manejar, adaptar y compartir skills sin caer en la trampa de los 120+ skills globales.',
-    icon: icons.ion,
+    description: 'La plataforma de integración AI-native que hace cada conexión inteligente, sin esfuerzo y siempre activa. Powered by ionMind + ionFlow + ionCLI.',
+    logo: '/logos/ion.svg',
     accentColor: '#b497dd',
-    tags: ['Skills', 'Monorepo', 'Disciplina', 'Adaptación'],
+    tags: ['iPaaS', 'Visual Flows', 'Headless Daemon', 'Auto-API'],
     status: 'active' as const,
   },
   {
     name: 'EDGE',
     slug: 'edge',
-    description: 'La interfaz de control. Hooks de seguridad, clasificación de riesgo, puertas humanas y la superficie de decisión.',
-    icon: icons.edge,
-    accentColor: '#dd97b4',
-    tags: ['Hooks', 'Seguridad', 'Risk Gate', 'Control'],
+    description: 'Ejecución de warehouse y manejo de materiales — armonía entre humanos y robots. Integración nativa con ASRS, AMR y sistemas de automatización.',
+    logo: '/logos/edge.svg',
+    accentColor: '#66BB6A',
+    tags: ['Warehouse', 'Execution', 'Material Handling', 'Labor Mgmt'],
     status: 'active' as const,
   },
   {
     name: 'AI',
     slug: 'ai',
-    description: 'Fábricas de Software completas. De chatear con agentes a pipelines de producción auditables. El estado del arte.',
-    icon: icons.ai,
+    description: 'Inteligencia centralizada del ecosistema. Dashboards unificados, business intelligence en tiempo real, insights con IA y reportes personalizados — todo en un solo lugar.',
+    logo: '/logos/novacrest.svg',
     accentColor: '#97ddd2',
-    tags: ['Factory', 'TDD', 'Auditoría', 'Producción'],
+    tags: ['Intelligence', 'Dashboards', 'ML Forecasting', 'Analytics'],
     status: 'active' as const,
   },
 ];
@@ -63,29 +62,29 @@ const products = [
 
 <BaseLayout title="Dashboard">
   <section class="hero">
-    <div class="hero-badge">PLATAFORMA DE APRENDIZAJE</div>
+    <div class="hero-badge">ECOSISTEMA NOVACREST</div>
     <h1 class="hero-title">
-      De Agentes de IA a
-      <span class="hero-highlight">Fábricas de Software</span>
+      La Plataforma de
+      <span class="hero-highlight">Orquestación Logística Inteligente</span>
     </h1>
     <p class="hero-subtitle">
-      Explora los 6 pilares del ecosistema NOVACREST. Cada módulo cubre un aspecto clave
-      del desarrollo con agentes — desde el meta-harness RSC hasta fábricas de software completas.
+      Explora los 6 pilares del ecosistema NOVACREST. Cada módulo cubre un producto clave
+      del sistema nervioso centralizado para cadenas de suministro modernas.
     </p>
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-value">3</span>
-        <span class="stat-label">Videos Analizados</span>
+        <span class="stat-value">10+</span>
+        <span class="stat-label">Productos Integrados</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-value">77</span>
-        <span class="stat-label">Conceptos Clave</span>
+        <span class="stat-value">$1.7B+</span>
+        <span class="stat-label">GMV Procesado</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-value">6</span>
-        <span class="stat-label">Módulos de Estudio</span>
+        <span class="stat-value">100M+</span>
+        <span class="stat-label">Labels Generadas</span>
       </div>
     </div>
   </section>
@@ -95,8 +94,6 @@ const products = [
       <ProductCard {...product} />
     ))}
   </section>
-
-
 </BaseLayout>
 
 <style>
@@ -182,8 +179,6 @@ const products = [
     gap: 1.25rem;
     margin: 2rem 0 3rem;
   }
-
-
 
   @media (max-width: 768px) {
     .grid {

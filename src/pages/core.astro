@@ -1,53 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductPage from '../components/ProductPage.astro';
-import { icons } from '../components/icons';
 ---
 
-<BaseLayout title="CORE">
+<BaseLayout title="CORE — Shipedge">
   <ProductPage
-    title="CORE"
-    subtitle="El cerebro del ecosistema. Memoria persistente, contexto compartido y el meta-harness RSC que conecta todo."
-    accentColor="#c5dd97"
-    icon={icons.core}
-    videoRef="Video 1 — Así se programa con agentes de IA en 2026"
+    title="CORE — Shipedge"
+    subtitle="Full WMS para centros de distribución y 3PLs. Arquitectura multi-tenant con workflows específicos por cliente, automatización de facturación e integración robótica."
+    accentColor="#4FC3F7"
+    logo="/logos/core.svg"
     concepts={[
       {
-        title: 'Memoria Persistente',
-        description: 'Las decisiones del proyecto, arquitectura y restricciones se almacenan de forma permanente. El agente nunca pierde el hilo entre sesiones — siempre sabe qué base de datos usas, qué patrones se decidieron y qué está prohibido.'
+        title: 'Arquitectura Multi-Tenant',
+        description: 'Gestiona múltiples clientes bajo un mismo techo de forma segura. Aísla inventario, órdenes y reportes mientras mantiene visibilidad centralizada para operadores 3PL.'
       },
       {
-        title: 'RSC Meta-Harness',
-        description: 'RSC (Repositorio de Sesiones y Contexto) es un meta-harness que se instala sobre cualquier proyecto. Genera memoria estructurada, herramientas reutilizables y restricciones del sistema automáticamente.'
+        title: 'Automatización de Facturación',
+        description: 'Captura cada evento facturable automáticamente. Desde tarifas de almacenamiento hasta picking, packing y servicios de valor agregado — sin ingresos perdidos.'
       },
       {
-        title: 'OKF — Open Knowledge Format',
-        description: 'Formato abierto de conocimiento que permite a los agentes leer y escribir memoria de forma estandarizada. Cada interacción se documenta y se acumula en la base de conocimiento del proyecto.'
+        title: 'Integración Robótica',
+        description: 'Soporte nativo para sistemas ASRS (almacenamiento y recuperación automáticos), robots móviles autónomos (AMR) y estaciones de pick inteligentes. Armonía entre humanos y robots.'
       },
       {
-        title: 'Economía de Tokens',
-        description: 'Sin memoria, el agente re-explora el código base cada vez. Con RSC, accede directamente a decisiones y arquitectura documentadas — reducción drástica del tamaño del prompt y del costo.'
+        title: 'Workflows por Cliente',
+        description: 'Diseña reglas de enrutamiento, empaquetado y requisitos de SLA personalizados por cliente sin escribir una sola línea de código.'
       },
       {
-        title: 'Restricciones como Características',
-        description: 'Las reglas (nunca push a main, límites de seguridad) se aplican a nivel de harness, no como sugerencias. El agente no puede violar invariantes del proyecto — auditable por diseño.'
-      },
-      {
-        title: 'Sincronización de Equipo',
-        description: 'El harness se comparte mediante un branch sincronizado vía Git. Todo el equipo arranca con el mismo contexto, herramientas y restricciones en menos de 5 minutos.'
+        title: 'Visibilidad Completa',
+        description: 'Dashboard centralizado con visibilidad en tiempo real de todas las operaciones del centro de distribución. Métricas de rendimiento, KPIs y alertas automáticas.'
       },
     ]}
     keyTakeaways={[
-      'RSC convierte sesiones únicas de agentes en un sistema duradero y compartible',
-      'Memoria + documentación + restricciones = fiabilidad',
-      'Prerequisito esencial para escalar más allá del chat individual',
-      'Se adapta a nuevos modelos y patrones de interacción',
-      'Código abierto disponible en GitHub',
+      'Arquitectura diseñada para escalar centros de distribución modernos',
+      'Multi-tenant real: cada cliente con sus workflows y facturación',
+      'Integración nativa con robótica y automatización de warehouse',
+      '100% de eventos facturables capturados automáticamente',
+      'Visibilidad total de operaciones en un solo panel',
     ]}
     relatedModules={[
       { name: 'OMNIO', slug: 'omnio', color: '#7db4e8' },
-      { name: 'ION', slug: 'ion', color: '#b497dd' },
-      { name: 'AI', slug: 'ai', color: '#97ddd2' },
+      { name: 'EDGE', slug: 'edge', color: '#66BB6A' },
+      { name: 'XENVIO', slug: 'xenvio', color: '#ddb897' },
     ]}
   />
 </BaseLayout>

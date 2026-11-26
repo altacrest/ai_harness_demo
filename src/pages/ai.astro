@@ -1,57 +1,52 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductPage from '../components/ProductPage.astro';
-import { icons } from '../components/icons';
 ---
 
-<BaseLayout title="AI">
+<BaseLayout title="AI — Novacrest Intelligence">
   <ProductPage
-    title="AI"
-    subtitle="Fábricas de Software completas. El estado del arte: de chatear con agentes a pipelines de producción auditables que funcionan mientras duermes."
+    title="AI — Novacrest Intelligence"
+    subtitle="Inteligencia centralizada del ecosistema. Dashboards unificados, business intelligence en tiempo real, insights con IA, reportes personalizados y ML forecasting — todo en un solo lugar."
     accentColor="#97ddd2"
-    icon={icons.ai}
-    videoRef="Video 3 — Programar con agentes ya no basta: monta tu Software Factory"
+    logo="/logos/novacrest.svg"
     concepts={[
       {
-        title: '¿Qué es una Fábrica de Software?',
-        description: 'Análoga a una fábrica de autos: acero entra, autos salen. En software: issues, errores, tareas entran → código de producción sale. Mezcla de pasos deterministas y agentes no-deterministas, todo repetible y auditable.'
+        title: 'Centralized Intelligence',
+        description: 'Dashboards centralizados poderosos — un solo panel de cristal para todas las operaciones. Business intelligence en tiempo real, insights impulsados por IA y reportes completamente flexibles.'
       },
       {
-        title: 'El Cerebro Crítico',
-        description: 'Memoria persistente del proyecto que sabe qué BD usas, las decisiones de arquitectura y las restricciones. Sin cerebro, los agentes pierden el hilo e inventan inconsistencias — es el fundamento de todo.'
+        title: 'Fluacy — ML Demand Forecasting',
+        description: 'Predicción de demanda impulsada por machine learning y posicionamiento predictivo de stock. Put-away inteligente y planificación de demanda localizada para pre-posicionar inventario más cerca del consumidor.'
       },
       {
-        title: 'Flujo Completo de la Fábrica',
-        description: 'Entrada (Sentry/GitHub/Slack) → Escritor de Specs (Opus+Cerebro) → Constructor (Opus+TDD+Branch) → 4 Revisores paralelos → Aprobador (loop) → Human Decision Agent → PR o Deploy.'
+        title: 'Proximity Intelligence',
+        description: 'Enrutamiento inteligente basado en proximidad y selección óptima de nodos de fulfillment. Fulfillment optimizado por geolocalización asegurando la ruta más corta del warehouse a la puerta del cliente.'
       },
       {
-        title: 'TDD Integrado',
-        description: 'El constructor escribe tests ANTES de la implementación. Los tests se convierten en parte permanente del cerebro. La protección contra regresiones es automática y los revisores confían en que los tests pasan.'
+        title: 'Edge AI — Procesamiento Local',
+        description: 'Modelos de IA desplegados localmente para procesamiento de datos cerca de la fuente. Escaneo de warehouse en tiempo real, edge computing de baja latencia y detección automatizada de anomalías.'
       },
       {
-        title: 'Trazabilidad Completa',
-        description: 'Cada paso deja una traza: timestamp de entrada, spec almacenada, hash de commit + tests, comentarios de revisores con modelo y razonamiento, decisión del aprobador + resultado del human gate.'
+        title: 'Composable & Headless Platform',
+        description: 'Plataforma verdaderamente componible y headless. Accede a la capa de orquestación de IonFlow vía API limpia e intuitiva. SDK: @novacrest/sdk para integración desde cualquier aplicación.'
       },
       {
-        title: 'Escalando Más Allá del Código',
-        description: 'Cualquier proceso repetible y auditable puede convertirse en fábrica: creación de contenido, marketing, triaje de soporte. Los mismos principios ya se aplican a edición de video con Opus 5.'
-      },
-      {
-        title: 'Camino de Evolución',
-        description: 'Inicio: un solo agente + memoria → Agregar spec + constructor TDD → Un revisor → Revisores paralelos especializados → Puerta humana basada en riesgo → Fábrica de software completa.'
+        title: 'ISO 27001 — Seguridad Certificada',
+        description: 'Estándar internacional de oro para gestión de seguridad de información. Mantenido activamente mediante testing de penetración continuo, gestión de vulnerabilidades y auditorías de compliance.'
       },
     ]}
     keyTakeaways={[
-      'Programar con agentes es lo básico — las fábricas son el siguiente nivel',
-      'Memoria + proceso + especialización + puertas humanas selectivas = producción',
-      'El cuello de botella ya no es codear, es definir procesos claros',
-      'Las empresas como OpenAI y Stripe ya operan a esta escala',
-      'Las herramientas y patrones ya están aquí — construye la fábrica',
+      'Un solo panel de cristal para todas las operaciones del ecosistema',
+      'ML forecasting con Fluacy para demanda predictiva',
+      'Edge AI para procesamiento de datos de baja latencia',
+      'Plataforma headless con SDK (@novacrest/sdk)',
+      'ISO 27001 certificado — seguridad de nivel enterprise',
+      '<50ms de latencia promedio de API',
     ]}
     relatedModules={[
-      { name: 'CORE', slug: 'core', color: '#c5dd97' },
+      { name: 'ION', slug: 'ion', color: '#b497dd' },
       { name: 'OMNIO', slug: 'omnio', color: '#7db4e8' },
-      { name: 'EDGE', slug: 'edge', color: '#dd97b4' },
+      { name: 'CORE', slug: 'core', color: '#4FC3F7' },
     ]}
   />
 </BaseLayout>

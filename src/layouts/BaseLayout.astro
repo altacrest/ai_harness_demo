@@ -22,12 +22,7 @@ const { title, description = 'Plataforma de aprendizaje sobre harnesses, skills 
   <body>
     <nav class="topbar">
       <a href="/" class="logo">
-        <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
-          <path d="M16 2L28 9v14l-12 7L4 23V9l12-7z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-          <path d="M16 2v28M4 9l24 14M28 9L4 23" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
-          <circle cx="16" cy="16" r="4" fill="currentColor" opacity="0.8"/>
-        </svg>
-        <span class="logo-text">NOVACREST</span>
+        <img src="/logos/novacrest.svg" alt="NOVACREST" class="logo-img" />
       </a>
       <div class="nav-links">
         <a href="/" class="nav-link">Dashboard</a>
@@ -115,20 +110,9 @@ const { title, description = 'Plataforma de aprendizaje sobre harnesses, skills 
     gap: 0.75rem;
   }
 
-  .logo-icon {
-    width: 32px;
-    height: 32px;
-    color: var(--accent-green);
-  }
-
-  .logo-text {
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .logo-img {
+    height: 28px;
+    width: auto;
   }
 
   .nav-links {

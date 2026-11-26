@@ -3,19 +3,24 @@ interface Props {
   name: string;
   slug: string;
   description: string;
-  icon: string;
+  icon?: string;
+  logo?: string;
   accentColor: string;
   tags: string[];
   status: 'active' | 'coming-soon' | 'beta';
 }
 
-const { name, slug, description, icon, accentColor, tags, status } = Astro.props;
+const { name, slug, description, icon, logo, accentColor, tags, status } = Astro.props;
 ---
 
 <a href={`/${slug}`} class="product-card" style={`--card-accent: ${accentColor};`}>
   <div class="card-glow"></div>
   <div class="card-header">
-    <div class="card-icon" set:html={icon} />
+    {logo ? (
+      <img src={logo} alt={name} class="card-logo" />
+    ) : (
+      <div class="card-icon" set:html={icon} />
+    )}
     {status !== 'active' && (
       <span class={`badge badge-${status}`}>
         {status === 'coming-soon' ? 'Próximamente' : 'Beta'}
@@ -84,6 +89,19 @@ const { name, slug, description, icon, accentColor, tags, status } = Astro.props
     height: 48px;
     color: var(--card-accent);
     opacity: 0.9;
+  }
+
+  .card-logo {
+    height: 36px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    filter: brightness(0.95);
+    transition: filter 0.3s;
+  }
+
+  .product-card:hover .card-logo {
+    filter: brightness(1.1);
   }
 
   .card-icon :global(svg) {

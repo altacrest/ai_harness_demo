@@ -1,49 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductPage from '../components/ProductPage.astro';
-import { icons } from '../components/icons';
 ---
 
-<BaseLayout title="OMNIO">
+<BaseLayout title="OMNIO — OmniOrders">
   <ProductPage
-    title="OMNIO"
-    subtitle="Orquestación de agentes multi-modelo. El sistema nervioso que coordina revisores paralelos, aprobadores y el flujo completo de la fábrica."
+    title="OMNIO — OmniOrders"
+    subtitle="Gestión distribuida de órdenes con sincronización de inventario en tiempo real y enrutamiento inteligente por proximidad. Precisión zero-error en todos los canales."
     accentColor="#7db4e8"
-    icon={icons.omnio}
-    videoRef="Video 3 — Programar con agentes ya no basta: monta tu Software Factory"
+    logo="/logos/omnio.svg"
     concepts={[
       {
-        title: 'Revisores Paralelos',
-        description: 'Cuatro sub-agentes especializados corren en paralelo: Seguridad (Sol), UX (Sol), UI (Astra), Código (Sonnet). Cada uno evalúa desde su perspectiva sin esperar a los demás.'
+        title: 'Proximity Routing',
+        description: 'Evalúa inventario en toda la red y enruta cada orden al nodo de fulfillment más cercano al destino. Logra las tarifas de envío más bajas y la entrega más rápida planificando la ruta completa antes de comenzar.'
       },
       {
-        title: 'Especialización de Modelos',
-        description: 'Opus para tareas de alto juicio (spec, construcción, aprobación). Sol para seguridad y UX. Astra para UI/uso de computadora. Sonnet para consistencia de código. El modelo correcto para cada trabajo.'
+        title: 'Order Splitting Inteligente',
+        description: 'Cuando un pedido tiene artículos en diferentes ubicaciones, el sistema divide la orden automáticamente y coordina los envíos para que lleguen al cliente de forma óptima.'
       },
       {
-        title: 'Ciclo del Aprobador',
-        description: 'Opus recibe feedback de los 4 revisores, clasifica problemas por severidad, envía correcciones al constructor y re-activa solo los revisores que fallaron. Continúa hasta aprobación unánime.'
+        title: 'Sincronización Multi-Canal',
+        description: 'Agrega órdenes de Shopify, Amazon, WooCommerce, Walmart, TikTok Shop y más en una sola cola unificada. Sincroniza inventario en tiempo real para prevenir overselling.'
       },
       {
-        title: 'Pipeline Determinista + No-Determinista',
-        description: 'La fábrica mezcla pasos de código deterministas (branches, tests, hooks) con agentes no-deterministas (escritor de specs, constructor). Cada paso deja una traza auditable.'
+        title: 'Go + Dragonfly',
+        description: 'Backend construido con Go y Dragonfly para rendimiento extremo. Maneja picos de volumen con 99.99% de uptime SLA garantizado.'
       },
       {
-        title: 'Paralelismo y Throughput',
-        description: 'Múltiples tareas corren simultáneamente, cada una con su propia branch y suite de tests. La fábrica puede procesar muchos elementos mientras los humanos duermen.'
+        title: 'Precisión Zero-Error',
+        description: 'Orquesta cada orden con precisión zero-error a través de todos los canales. Validación en cada paso del proceso desde la recepción hasta el despacho.'
       },
     ]}
     keyTakeaways={[
-      'Agentes paralelos especializados superan al generalista individual',
-      'El ciclo aprobador-constructor itera hasta calidad unánime',
-      'El throughput escala con los agentes disponibles',
-      'El costo se vuelve predecible por tarea',
-      'Los revisores terminan aproximadamente en el tiempo del más lento',
+      'Enrutamiento por proximidad para las tarifas más bajas y entregas más rápidas',
+      'Order splitting automático cuando el inventario está distribuido',
+      'Sincronización de inventario en tiempo real para prevenir overselling',
+      'Backend Go + Dragonfly para rendimiento de producción extremo',
+      'Integración nativa con todos los canales de venta principales',
     ]}
     relatedModules={[
-      { name: 'CORE', slug: 'core', color: '#c5dd97' },
-      { name: 'EDGE', slug: 'edge', color: '#dd97b4' },
-      { name: 'AI', slug: 'ai', color: '#97ddd2' },
+      { name: 'CORE', slug: 'core', color: '#4FC3F7' },
+      { name: 'XENVIO', slug: 'xenvio', color: '#ddb897' },
+      { name: 'ION', slug: 'ion', color: '#b497dd' },
     ]}
   />
 </BaseLayout>
